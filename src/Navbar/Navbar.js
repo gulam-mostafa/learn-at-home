@@ -115,13 +115,13 @@ function BasicExample() {
             className="justify-content-end "
           >
             <Nav className="me-1 ">
-              <Nav.Link className="text-info fs-5 font-weight-bold" href="/">
-                Home
+              <Nav.Link className="text-info fs-5 font-weight-bold " >
+              <Link className="text-decoration-none" to="/">Home</Link>
               </Nav.Link>
 
               <Nav.Link
                 className="text-info fs-5 font-weight-bold"
-                href="/course"
+              
               >
                 <Link className="text-danger text-decoration-none" to="/course">
                   Courses

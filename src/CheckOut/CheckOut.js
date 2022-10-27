@@ -17,14 +17,14 @@ const CheckOut = () => {
   const { image_url, price, title, rating } = checkOutData;
   console.log(checkOutData);
   return (
-    <div className="mb-4">
+    <div className="mb-4 vh-100">
       <h2 className="text-center">
         Name of Course:{" "}
         <span className="text-success">{checkOutData.title}</span>
       </h2>
 
       <div className="  d-flex  justify-content-center align-items-center ">
-        <div className="card" style={{ height: "48rem", width: "28rem" }}>
+        <div className="card" style={{ height: "36rem", width: "28rem" }}>
           <h4 className="text-center mb-3">Please chhek Your Payment </h4>
 
           {user?.displayName ? (
@@ -84,14 +84,14 @@ const CheckOut = () => {
             <h4>{rating.number}</h4>
           </div>
 
-          <div className=" btn-position w-100 d-flex flex-column justify-content-c align-items-cent">
+          <div className="  w-100 d-flex flex-column  mt- justify-content-c align-items-cent">
           <Button onClick={handleShow} type="button" className="bg-danger my-3">
             Pay $ {price}
           </Button>
 
           
             <Link type="button"  to="/">
-              <Button  className="w-100" type="button">Home</Button>
+              <Button  className="w-100 " type="button">Home</Button>
             </Link>
           </div>
           
