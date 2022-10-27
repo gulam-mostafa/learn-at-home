@@ -19,7 +19,7 @@ const MyHome = () => {
   }, []);
 
   return (
-    <div className=" d-flex justify-content-around">
+    <div className=" d-flex justify-content-around vh-100">
       <div className="w-50 mt-5 ">
         <h1 className="text-center ">Achieve Your Skill from <span className="text-warning">Your Home</span></h1>
         <p className="mt-5">
