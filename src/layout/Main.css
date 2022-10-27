@@ -1,16 +1,12 @@
-
- .right-up{
-    display: none;
-   
+.right-up {
+  display: none;
 }
 @media only screen and (max-width: 993px) {
-    .rightSideUp{
-        display: none;
-        grid-row: 1
-    }
-    .right-up{
-        display:block;
-       
-    }
-    
+  .rightSideUp {
+    display: none;
+    grid-row: 1;
   }
+  .right-up {
+    display: block;
+  }
+}
