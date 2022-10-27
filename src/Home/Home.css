@@ -1,0 +1,31 @@
+
+.grid-item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 1402px)  {
+    .grid-item{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+       
+    }
+    
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .grid-item{
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+      align-items: center;
+    }
+    
+  }
+
+
