@@ -10,7 +10,7 @@ const Topics = () => {
     const courses = useLoaderData();
 
     return (
-        <div ref={ref}  className=' px-3 bg-info rounded'>
+        <div ref={ref}  className=' px-3 bg-light rounded'>
             <div className='px-4' >
            <h1 className='text-center ' >Course Name: <span className='text-warning'> {courses.title}</span> </h1>
            <p className=''>{courses.details}</p>

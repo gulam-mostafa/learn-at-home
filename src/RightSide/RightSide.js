@@ -14,10 +14,10 @@ const [category , setCategory] = useState([]);
     return (
         <div className=''>
             <h2>Total Category {category.length}</h2>
-            <div>
+            <div className=''>
                 {
                     category.map(category=> <p key={category.id}>
-                        <Link to={`rightside/${category.id}`}>{category.name}</Link>
+                        <Link className='fs-5 ' to={`rightside/${category.id}`}><h3>{category.name}</h3></Link>
                     </p>)
                 }
             </div>

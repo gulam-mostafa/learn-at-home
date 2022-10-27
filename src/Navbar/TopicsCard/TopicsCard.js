@@ -15,8 +15,8 @@ const TopicsCard = ({topic}) => {
 
 
             <div  ref={ref} >
-         <div style={{ width: '18rem' }}>
-      <Card.Img className='mt-2' variant="top" src={topic.image_url} />
+         <div style={{ width: '18rem' }} >
+     <div  className="  m-auto " style={{ width: '16rem' }}> <Card.Img className='mt-2 card img-fluid img-thumbnail' variant="top" src={topic.image_url} /></div>
       <Card.Body>
         <Card.Title>{topic.title}</Card.Title>
         <Card.Text>
@@ -33,9 +33,11 @@ const TopicsCard = ({topic}) => {
         <Link to={`/checkout/${_id}`}  ><Button variant="primary">check Out</Button></Link>
         
       </Card.Body>
-      <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <Button className='bg-info w-100' onClick={toPdf}>Download This  Demo Course</Button>}
+      <div className=' d-flex  align-items-center mb-2'>
+      <Pdf  targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <Button className='bg-info w-10 m-auto' onClick={toPdf}>Download This  Course</Button>}
       </Pdf>
+      </div>
     </div>
     
         </div>
