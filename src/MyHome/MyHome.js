@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import './MyHome.css'
 
 const MyHome = () => {
   const container = useRef(null);
@@ -19,7 +20,8 @@ const MyHome = () => {
   }, []);
 
   return (
-    <div className=" d-flex justify-content-around ">
+    <div>
+      <div className=" d-flex justify-content-around ">
       <div className="w-50 mt-5 ">
         <h1 className="text-center ">Achieve Your Skill from <span className="text-warning">Your Home</span></h1>
         <p className="mt-5 ">
@@ -31,9 +33,12 @@ const MyHome = () => {
         
       </div>
 
-     <div className="w-50 ">
-     <div className="container vh-25" ref={container}></div>
+     <div className="w-50  custom-vh1">
+     <div className="container " ref={container}></div>
      </div>
+    
+    </div>
+    <div className="custom-vh1"></div>
     </div>
   );
 };

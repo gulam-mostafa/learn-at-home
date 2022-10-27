@@ -2,7 +2,9 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import Pdf from "react-to-pdf";
+import './Topics.css'
 const ref = React.createRef();
+
 
 const Topics = () => {
     const courses = useLoaderData();
@@ -22,9 +24,11 @@ const Topics = () => {
         
         </div>
 
-        <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <Button className='bg-warning my-5 vh-25' onClick={toPdf}>Download Pdf</Button>}
+        <div className='custom-vh '>
+        <Pdf targetRef={ref}   filename="code-example.pdf">
+        {({ toPdf }) => <Button className='bg-warning my-5 ' onClick={toPdf}>Download Pdf</Button>}
       </Pdf>
+        </div>
         </div>
 
     

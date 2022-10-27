@@ -1,3 +1,52 @@
+
+# course Description
+ This is the single page Application. this application  used react js library 
+basically this website make for educational courses people can buy courses and the are learn  and they can achievement skill about english language and programming  , digital marketing , android development and other courses, this course is very easy to learn people can learn from they are home and any time thy can buy and learn thire are needed course.
+
+# Feature of Course
+* This website Hosting on Firebase and used firebase authentication.
+* This Page make by using API data . APi data is Hosting on vercel ,
+* used Privet Router for When people go checkout page with out registration/ login then redirect to login and after login return go user needed page.
+* User can download demo course by pdf 
+* making this website by Boostrap an react_Boostrap 
+* use animation at home page. animation collect form lotte file website
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
