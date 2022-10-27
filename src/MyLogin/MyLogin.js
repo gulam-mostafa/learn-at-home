@@ -1,4 +1,8 @@
-import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import { useState } from "react";
 import { useContext } from "react";
 import Button from "react-bootstrap/Button";
@@ -11,35 +15,34 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
 function BasicExample() {
-
   const [error, setError] = useState("");
   console.log(error);
 
   const navigate = useNavigate();
-const location = useLocation()
-const from = location.state?.from?.pathname || "/"
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const { providerLogin } = useContext(AuthContext);
 
   const googleProvider = new GoogleAuthProvider();
-  const githubProbider = new GithubAuthProvider()
+  const githubProbider = new GithubAuthProvider();
 
-
-  const handleGithubSignIn =() =>{
+  const handleGithubSignIn = () => {
     providerLogin(githubProbider)
-    .then((result ) => {const user = result.user;
-      console.log(user);
-      navigate(from, {replace: true});
-    })
-    .catch((error) => console.log(error));
-  }
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+      })
+      .catch((error) => console.log(error));
+  };
 
   const handleGoogleSignIn = () => {
     providerLogin(googleProvider)
       .then((result) => {
         const user = result.user;
         console.log(user);
-        navigate(from, {replace: true});
+        navigate(from, { replace: true });
       })
       .catch((error) => console.log(error));
   };
@@ -55,7 +58,7 @@ const from = location.state?.from?.pathname || "/"
         console.log(user);
         form.reset();
         setError("");
-        navigate(from, {replace: true});
+        navigate(from, { replace: true });
       })
       .catch((e) => {
         console.error(e);
@@ -75,21 +78,29 @@ const from = location.state?.from?.pathname || "/"
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" name="password" placeholder="Password" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-       
-      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
       <Button className="me-3" variant="primary" type="submit">
         Loogin
       </Button>
-       <h6><small>Are you new this website? <Link to='/register'>Please register</Link></small></h6>
-      <Button onClick={handleGoogleSignIn} variant="info"> <span className=""><FcGoogle /> </span>
-         Google  
+      <h6>
+        <small>
+          Are you new this website? <Link to="/register">Please register</Link>
+        </small>
+      </h6>
+      <Button onClick={handleGoogleSignIn} variant="info">
+        {" "}
+        <span className="">
+          <FcGoogle />{" "}
+        </span>
+        Google
       </Button>{" "}
-      
-      <Button onClick={handleGithubSignIn} variant="info"> <span className=""><FaGithub /> </span>
-        Github  
+      <Button onClick={handleGithubSignIn} variant="info">
+        {" "}
+        <span className="">
+          <FaGithub />{" "}
+        </span>
+        Github
       </Button>{" "}
-      
       <br />
       <Form.Text className="text-danger">{error}</Form.Text>
     </Form>
