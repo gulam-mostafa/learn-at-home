@@ -57,3 +57,9 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .bg-color{
+    /* background-color: rgb(109, 104, 104); */
+    background-image: linear-gradient(to right ,rgb(57, 74, 57),rgb(106, 106, 116),rgb(193, 144, 103),rgb(210, 191, 210));
+    
+  }

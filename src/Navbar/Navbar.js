@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthProvider/AuthProvider";
 import Main from "../layout/Main";
 import "./Navbar.css";
-import {FcManager } from "react-icons/fc";
+import { FcManager } from "react-icons/fc";
 
 function BasicExample() {
   const { user, logOut } = useContext(AuthContext);
@@ -18,27 +18,23 @@ function BasicExample() {
       .then(() => {})
       .catch((error) => console.error(error));
   };
-  const [toggle, setToggle] =useState(false)
-  
+  const [toggle, setToggle] = useState(false);
 
-  const handleToggle =(event)=>{
-    setToggle(event?.target?.checked)
-    const toggle1 =event?.target?.checked
-    console.log(toggle1)
-    if(toggle1){
-      document.body.style.backgroundColor = "#808080"
-    }else
-    {
-      document.body.style.backgroundColor = "#FFF0F5"
+  const handleToggle = (event) => {
+    setToggle(event?.target?.checked);
+    const toggle1 = event?.target?.checked;
+    console.log(toggle1);
+    if (toggle1) {
+      document.body.style.backgroundColor = "#808080";
+    } else {
+      document.body.style.backgroundColor = "#FFF0F5";
     }
-
-
-  }
+  };
 
   return (
     <div>
-      <Navbar  bg="dark gradient"  expand="lg">
-        <Container >
+      <Navbar bg="darkf gradient" className="bg-color" expand="lg">
+        <Container>
           <Navbar.Brand className="text-success fs-2 font-weight-bold ">
             <Link className="text-decoration-none" to="/course">
               Learn at Home
@@ -56,7 +52,7 @@ function BasicExample() {
                 src={user?.photoURL}
               ></Image>
             ) : (
-              <FcManager /> 
+              <FcManager />
             )}
           </Nav.Link>
 
@@ -109,13 +105,16 @@ function BasicExample() {
             )}
           </Nav.Link>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle
+            className="text-light"
+            aria-controls="basic-navbar-nav  "
+          />
 
           <Navbar.Collapse
             id="basic-navbar-nav"
-            className="justify-content-end"
+            className="justify-content-end "
           >
-            <Nav className="me-1">
+            <Nav className="me-1 ">
               <Nav.Link className="text-info fs-5 font-weight-bold" href="/">
                 Home
               </Nav.Link>
@@ -129,25 +128,21 @@ function BasicExample() {
                 </Link>
               </Nav.Link>
 
-              <Nav.Link
-                className="text-info fs-5 font-weight-bold"
-                
-              >
-                <Link className="text-decoration-none" to="/blog"> Blog </Link>
-              
+              <Nav.Link className="text-info fs-5 font-weight-bold">
+                <Link className="text-decoration-none" to="/blog">
+                  {" "}
+                  Blog{" "}
+                </Link>
               </Nav.Link>
-              <Nav.Link
-                className="text-info fs-5 font-weight-bold"
-               
-              >
-              <Link to='/faq'>  FAQ</Link>
+              <Nav.Link className="text-info fs-5 font-weight-bold">
+                <Link to="/faq"> FAQ</Link>
               </Nav.Link>
-             <div className="d-flex align-items-center">
-             <label class="switch">
-                <input onClick={handleToggle}  type="checkbox" />
-                <span class="slider round"></span>
-              </label>
-             </div>
+              <div className="d-flex align-items-center">
+                <label className="switch">
+                  <input onClick={handleToggle} type="checkbox" />
+                  <span className="slider round"></span>
+                </label>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>

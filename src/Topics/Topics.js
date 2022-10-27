@@ -8,10 +8,10 @@ const Topics = () => {
     const courses = useLoaderData();
 
     return (
-        <div ref={ref}  className='vh-100 px-3 bg-info rounded'>
+        <div ref={ref}  className=' px-3 bg-info rounded'>
             <div className='px-4' >
            <h1 className='text-center ' >Course Name: <span className='text-warning'> {courses.title}</span> </h1>
-           <p>{courses.details}</p>
+           <p className=''>{courses.details}</p>
            <p>Total sold: {courses.total_sold}</p>
            <p>Course Price: {courses.price} $ Only</p>
            <p>Course Rating: {courses.rating.number}</p>
@@ -23,7 +23,7 @@ const Topics = () => {
         </div>
 
         <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <Button className='bg-warning my-5' onClick={toPdf}>Download Pdf</Button>}
+        {({ toPdf }) => <Button className='bg-warning my-5 vh-25' onClick={toPdf}>Download Pdf</Button>}
       </Pdf>
         </div>
 
