@@ -22,7 +22,7 @@ const TopicsCard = ({topic}) => {
         <Card.Text>
       {
           details.length > 150 ? 
-           <p>{details.slice(0, 200 ) + '...' } <Link to={`/topics/${_id}`}>Read More</Link></p> 
+           <p className='px-2'>{details.slice(0, 200 ) + '...' } <Link to={`/topics/${_id}`}>Read More</Link></p> 
            :
            <p>{details}</p>
 
@@ -35,7 +35,7 @@ const TopicsCard = ({topic}) => {
       </Card.Body>
       <div className=' d-flex  align-items-center mb-2'>
       <Pdf  targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <Button className='bg-info w-10 m-auto' onClick={toPdf}>Download This  Course</Button>}
+        {({ toPdf }) => <Button className='bg-dark w-10 m-auto' onClick={toPdf}>Download This  Course</Button>}
       </Pdf>
       </div>
     </div>
