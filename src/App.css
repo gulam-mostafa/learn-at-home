@@ -1,8 +1,8 @@
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   .App {
     text-align: center;
   }
-  
+
   .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -14,7 +14,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 @media only screen and (max-width: 600px) {
   .App-header {
@@ -30,7 +29,7 @@
   .App-link {
     color: #61dafb;
   }
-  
+
   @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);
@@ -39,8 +38,4 @@
       transform: rotate(360deg);
     }
   }
-  
 }
-
-
-
