@@ -15,7 +15,7 @@ function BasicExample() {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => { })
       .catch((error) => console.error(error));
   };
   const [toggle, setToggle] = useState(false);
@@ -33,7 +33,7 @@ function BasicExample() {
 
   return (
     <div>
-      <Navbar bg="darkf gradient" className="bg-color" expand="lg">
+      <Navbar bg="darkf gradient" className="bg-color " expand="lg">
         <Container>
           <Navbar.Brand className="text-success fs-2 font-weight-bold ">
             <Link className="text-decoration-none" to="/course">
@@ -116,14 +116,14 @@ function BasicExample() {
           >
             <Nav className="me-1 ">
               <Nav.Link className="text-info fs-5 font-weight-bold " >
-              <Link className="text-decoration-none" to="/">Home</Link>
+                <Link className="text-decoration-none" to="/">Home</Link>
               </Nav.Link>
 
               <Nav.Link
                 className="text-info fs-5 font-weight-bold"
-              
+
               >
-                <Link className="text-danger text-decoration-none" to="/course">
+                <Link className=" text-decoration-none" to="/course">
                   Courses
                 </Link>
               </Nav.Link>

@@ -1,3 +1,25 @@
 .custom-vh1 {
   height: 50vh;
+  
+}
+.textside{
+  width: 50%
+}
+.animation{
+  width: 50%
+}
+
+@media only screen and (max-width: 800px) {
+  
+  .custom-vh1 {
+    height: 30vh;
+  }
+    
+
+.textside{
+  width: 100%
+}
+.animation{
+  width: 100%
+}
 }

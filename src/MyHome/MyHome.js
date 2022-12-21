@@ -21,8 +21,8 @@ const MyHome = () => {
 
   return (
     <div>
-      <div className=" d-flex justify-content-around ">
-        <div className="w-50 mt-5 ">
+      <div className=" d-md-flex d-lg-flex d-xl-flex justify-content-around ">
+        <div className="w-1000. textside mt-5 ">
           <h1 className="text-center ">
             Achieve Your Skill from{" "}
             <span className="text-warning">Your Home</span>
@@ -43,7 +43,7 @@ const MyHome = () => {
           </p>
         </div>
 
-        <div className="w-50  custom-vh1">
+        <div className=" w-14 animation custom-vh1">
           <div className="container " ref={container}></div>
         </div>
       </div>
